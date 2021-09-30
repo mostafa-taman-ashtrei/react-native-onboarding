@@ -11,7 +11,11 @@ const App: React.FC = () => {
     return (
         <NavigationContainer>
             <AppStack.Navigator>
-                <AppStack.Screen name="Welcome" component={OnboardingScreen} />
+                <AppStack.Screen
+                    options={{ headerStyle: { height: 0 } }}
+                    name="Welcome"
+                    component={OnboardingScreen}
+                />
                 <AppStack.Screen name="Home" component={HomeScreen} />
             </AppStack.Navigator>
         </NavigationContainer>
