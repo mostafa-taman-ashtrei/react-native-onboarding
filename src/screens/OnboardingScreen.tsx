@@ -18,15 +18,15 @@ const OnboardingScreen: React.FC<props> = ({ navigation }) => {
             DoneButtonComponent={Done}
             DotComponent={Dots}
             onSkip={() => navigation.replace('Home')}
-            onDone={() => navigation.navigate('Home')}
+            onDone={() => navigation.replace('Home')}
             pages={[
                 {
                     backgroundColor: '#3787f0',
                     image: (
                         <Image
                             style={{
-                                width: 350,
-                                height: 350,
+                                width: 400,
+                                height: 400,
                             }}
                             source={require('../assets/pic1.png')}
                         />
@@ -40,8 +40,8 @@ const OnboardingScreen: React.FC<props> = ({ navigation }) => {
                     image: (
                         <Image
                             style={{
-                                width: 350,
-                                height: 350,
+                                width: 400,
+                                height: 400,
                             }}
                             source={require('../assets/pic4.png')}
                         />
@@ -55,8 +55,8 @@ const OnboardingScreen: React.FC<props> = ({ navigation }) => {
                     image: (
                         <Image
                             style={{
-                                width: 350,
-                                height: 350,
+                                width: 400,
+                                height: 400,
                             }}
                             source={require('../assets/pic3.png')}
                         />
@@ -70,8 +70,8 @@ const OnboardingScreen: React.FC<props> = ({ navigation }) => {
                     image: (
                         <Image
                             style={{
-                                width: 350,
-                                height: 350,
+                                width: 400,
+                                height: 400,
                             }}
                             source={require('../assets/pic2.png')}
                         />
