@@ -1,24 +1,20 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, Text, useColorScheme } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import OnboardingScreen from './src/screens/OnboardingScreen';
 
 const App: React.FC = () => {
-    const isDarkMode = useColorScheme() === 'dark';
-
-    const backgroundStyle = {
-        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
+    const AppStack = createStackNavigator();
 
     return (
-        <SafeAreaView style={backgroundStyle}>
-            <StatusBar
-                barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-            />
-            <Text style={{ color: 'white', textAlign: 'center', fontSize: 30 }}>
-                Hello World !
-            </Text>
-        </SafeAreaView>
+        <NavigationContainer>
+            <AppStack.Navigator>
+                <AppStack.Screen name="Welcome" component={OnboardingScreen} />
+                <AppStack.Screen name="Home" component={HomeScreen} />
+            </AppStack.Navigator>
+        </NavigationContainer>
     );
 };
 
